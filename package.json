@@ -1,0 +1,36 @@
+{
+  "name": "reactcdmx",
+  "version": "0.0.1",
+  "description": "1er. Meetup ReactCDMX",
+  "scripts": {
+    "build": "browserify src/app.js -t [ babelify --presets [ react es2015 ]  ] -o dist/app.js",
+    "watch": "watchify src/app.js -v -t [ babelify --presets [ react es2015 ]  ] -o dist/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ReactCDMX/platicas.git"
+  },
+  "keywords": [
+    "React",
+    "CDMX",
+    "ReactCDMX",
+    "platicas"
+  ],
+  "author": "@pitakill",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/ReactCDMX/platicas/issues"
+  },
+  "homepage": "https://github.com/ReactCDMX/platicas#readme",
+  "dependencies": {
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "devDependencies": {
+    "babelify": "^7.3.0",
+    "browserify": "^14.1.0",
+    "watchify": "^3.9.0"
+  }
+}

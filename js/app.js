@@ -1,6 +1,14 @@
 'use strict';
 
 var MyComponent = React.createClass({
+  getDefaultProps: function() {
+    return {
+      message: "Esto es un 'default prop'"
+    };
+  },
+  propTypes: {
+    message: React.PropTypes.string
+  },
   render: function() {
     return (
       <div>
@@ -11,7 +19,18 @@ var MyComponent = React.createClass({
   }
 });
 
+var WrapperComponent = React.createClass({
+  render: function() {
+    return (
+      <div>
+        <MyComponent />
+        <MyComponent message="Mira mamá, otro componente" />
+      </div>
+    );
+  }
+});
+
 ReactDOM.render(
-  <MyComponent message="Mi segundo encabezado" />,
+  <WrapperComponent />,
   document.getElementById('root')
 );

@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>1er. Meetup ReactCDMX</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-with-addons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      var MyComponent = React.createClass({
+        render: function() {
+          return React.DOM.h1(null, 'Hola ReactCDMX');
+        }
+      });
+
+      ReactDOM.render(React.createElement(MyComponent), document.getElementById('root'));
+    </script>
+  </body>
+</html>

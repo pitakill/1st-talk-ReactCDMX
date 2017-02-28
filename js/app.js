@@ -5,10 +5,13 @@ var MyComponent = React.createClass({
     return (
       <div>
         <h1>Hola ReactCDMX</h1>
-        <h2>Segundo encabezdo</h2>
+        <h2>{this.props.message}</h2>
       </div>
     );
   }
 });
 
-ReactDOM.render(<MyComponent/>, document.getElementById('root'));
+ReactDOM.render(
+  <MyComponent message="Mi segundo encabezado" />,
+  document.getElementById('root')
+);

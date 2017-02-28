@@ -1,19 +1,24 @@
 'use strict';
 
 var MyComponent = React.createClass({
-  getDefaultProps: function() {
+  getInitialState: function() {
     return {
-      message: "Esto es un 'default prop'"
+      message: 'Mensaje por defecto'
     };
   },
-  propTypes: {
-    message: React.PropTypes.string
+  updateText: function(event) {
+    this.setState({
+      message: event.target.value
+    });
   },
   render: function() {
     return (
       <div>
-        <h1>Hola ReactCDMX</h1>
-        <h2>{this.props.message}</h2>
+      <input
+        type="text"
+        onChange={this.updateText}
+        />
+        <h2>{this.state.message}</h2>
       </div>
     );
   }
@@ -24,7 +29,7 @@ var WrapperComponent = React.createClass({
     return (
       <div>
         <MyComponent />
-        <MyComponent message="Mira mamá, otro componente" />
+        <MyComponent />
       </div>
     );
   }

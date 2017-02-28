@@ -2,8 +2,8 @@
 
 var MyComponent = React.createClass({
   render: function() {
-    return React.DOM.h1(null, 'Hola ReactCDMX');
+    return <h1>Hola ReactCDMX</h1>;
   }
 });
 
-ReactDOM.render(React.createElement(MyComponent), document.getElementById('root'));
+ReactDOM.render(<MyComponent/>, document.getElementById('root'));
